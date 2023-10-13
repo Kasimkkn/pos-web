@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pos-SYstem</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+
+            <div class="menu-item">
+                <a href="index.html">POS</a>
+                <button class="toggle-button mx-4 text-success " id="toggle-sidebar">&#9776;</button>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-tachometer-alt text-success fs-5"></i>
+                <a href="index.html">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-box text-success fs-5"></i>
+                <a href="pages/Products.html">Products</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-list-alt text-success fs-5"></i>
+                <a href="pages/Category.html">Category</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-shopping-cart text-success fs-5"></i>
+                <a href="pages/Sales.html">Sales</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-chart-line text-success fs-5"></i>
+                <a href="pages/Purchases.html">Purchases</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-undo text-success fs-5"></i>
+                <a href="pages/Returns.html">Returns</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-users text-success fs-5"></i>
+                <a href="pages/Peoples.html">Peoples</a>
+
+            </div>
+        </div>
+
+        <div class="content-page">
+            <div class="top-navbar">
+                <div class="navbar-custom">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="row d-flex align-items-center justify-content-between w-100">
+                            <div class="col-lg-6">
+                                <div class="search-bar device-search w-100 mx-2">
+                                    <form action="#" class="searchbox">
+                                        <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+                                        <input type="text" class="form-control search-input" placeholder="Search here...">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <div class="icons mx-2 mx-lg-5 d-flex gap-5">
+                                    <div class="notification">
+                                        <i class="fas fa-envelope text-success fs-5"></i>
+                                    </div>
+                                    <div class="mail">
+                                        <i class="fas fa-users text-success fs-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+
+                <div class="row mt-4">
+                    <div class="col-lg-4 ">
+                        <h3 class="fw-semibold">Hi Admin,Good Morning</h3>
+                        <p>Your dashboard gives you views of key performance or business process.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card card-body p-4">
+                                    <div class="d-flex">
+                                        <div class="cardsImage">
+                                            <img src="img/1.png" alt="1" class="image-fluid" style="max-height:25px">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <Span>Total Sales</Span>
+                                            <h4>31.40</h4>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 45%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card card-body p-4">
+                                    <div class="d-flex">
+                                        <div class="cardsImage">
+                                            <img src="img/1.png" alt="1" class="image-fluid" style="max-height:25px">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <Span>Total Sales</Span>
+                                            <h4>31.40</h4>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 55%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card card-body p-4">
+                                    <div class="d-flex">
+                                        <div class="cardsImage">
+                                            <img src="img/1.png" alt="1" class="image-fluid" style="max-height:25px">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <Span>Total Sales</Span>
+                                            <h4>31.40</h4>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                overview
+                            </div>
+                            <div class="card-body">
+                                <canvas id="overview"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Revenue & Cost
+                            </div>
+                            <div class="card-body">
+                                <canvas id="revenueCost"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-lg-8 p-2">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between p-3 bg-transparent">
+                                <div>
+                                    <h3>Top Products</h3>
+                                </div>
+                                <div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-success dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Check
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Year</a></li>
+                                            <li><a class="dropdown-item" href="#">Month</a></li>
+                                            <li><a class="dropdown-item" href="#">Week</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body overflow-hidden text-center">
+                                                <img src="img/02.png" alt="" class="img-fluid p-2 rounded"
+                                                    style="background: powderblue;max-width: 100%;height: auto;">
+                                                <h3>Rain Umbrella</h3>
+                                                <h6>468 items</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body overflow-hidden text-center">
+                                                <img src="img/02.png" alt="" class="img-fluid p-2 rounded"
+                                                    style="background: rgb(211, 176, 210);max-width: 100%;height: auto;">
+                                                <h3>Rain Umbrella</h3>
+                                                <h6>468 items</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body overflow-hidden text-center">
+                                                <img src="img/02.png" alt="" class="img-fluid p-2 rounded"
+                                                    style="background: rgb(174, 225, 162);max-width: 100%;height: auto;">
+                                                <h3>Rain Umbrella</h3>
+                                                <h6>468 items</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="">
+                            <div class="card-header bg-transparent d-flex justify-content-between p-2">
+                                <h3>Best Item All Time</h3>
+                                <button class="btn btn-success">View All</button>
+                            </div>
+                            <div class="card d-flex flex-row p-2">
+                                <div class="card h-25" style="background: rgb(240, 180, 145);">
+                                    <img src="img/03.png" alt="" class="">
+                                </div>
+                                <div class="px-3 d-flex flex-column gap-2">
+                                    <h4>Coffee Beans</h4>
+                                    <h6 class="fw-light">Total Sell : 4869</h6>
+                                    <h6 class="fw-light">Total Earned : $45,60 M</h6>
+                                </div>
+                            </div>
+                            <div class="card d-flex flex-row p-2">
+                                <div class="card h-25" style="background: pink;">
+                                    <img src="img/03.png" alt="" class="">
+                                </div>
+                                <div class="px-3 d-flex flex-column gap-2">
+                                    <h4>Coffee Beans</h4>
+                                    <h6 class="fw-light">Total Sell : 4869</h6>
+                                    <h6 class="fw-light">Total Earned : $45,60 M</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-lg-4">  
+                        <div class="card card-block card-stretch card-height-helf">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top justify-content-between">
+                                    <div class="">
+                                        <p class="mb-0">Income</p>
+                                        <h5>$ 98,7800 K</h5>
+                                    </div>
+                                    <div class="card-header-toolbar d-flex align-items-center">
+                                        <div class="dropdown">
+                                            <span class="dropdown-toggle dropdown-bg btn" id="dropdownMenuButton003"
+                                                data-toggle="dropdown">
+                                                This Month<i class="ri-arrow-down-s-line ml-1"></i>
+                                            </span>
+                                            <div class="dropdown-menu dropdown-menu-right shadow-none"
+                                                aria-labelledby="dropdownMenuButton003">
+                                                <a class="dropdown-item" href="#">Year</a>
+                                                <a class="dropdown-item" href="#">Month</a>
+                                                <a class="dropdown-item" href="#">Week</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="layout1-chart-3" class="layout-chart-1"></div>
+                            </div>
+                        </div>
+                        <div class="card card-block card-stretch card-height-helf">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top justify-content-between">
+                                    <div class="">
+                                        <p class="mb-0">Expenses</p>
+                                        <h5>$ 45,8956 K</h5>
+                                    </div>
+                                    <div class="card-header-toolbar d-flex align-items-center">
+                                        <div class="dropdown">
+                                            <span class="dropdown-toggle dropdown-bg btn" id="dropdownMenuButton004"
+                                                data-toggle="dropdown">
+                                                This Month<i class="ri-arrow-down-s-line ml-1"></i>
+                                            </span>
+                                            <div class="dropdown-menu dropdown-menu-right shadow-none"
+                                                aria-labelledby="dropdownMenuButton004">
+                                                <a class="dropdown-item" href="#">Year</a>
+                                                <a class="dropdown-item" href="#">Month</a>
+                                                <a class="dropdown-item" href="#">Week</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="expenseChart" class="layout-chart-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">  
+                        <div class="card card-block card-stretch card-height">
+                            <div class="card-header d-flex justify-content-between">
+                                <div class="header-title">
+                                    <h4 class="card-title">Order Summary</h4>
+                                </div>                        
+                                <div class="card-header-toolbar d-flex align-items-center">
+                                    <div class="dropdown">
+                                        <span class="dropdown-toggle dropdown-bg btn" id="dropdownMenuButton005"
+                                            data-toggle="dropdown">
+                                            This Month<i class="ri-arrow-down-s-line ml-1"></i>
+                                        </span>
+                                        <div class="dropdown-menu dropdown-menu-right shadow-none"
+                                            aria-labelledby="dropdownMenuButton005">
+                                            <a class="dropdown-item" href="#">Year</a>
+                                            <a class="dropdown-item" href="#">Month</a>
+                                            <a class="dropdown-item" href="#">Week</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="card-body pb-2">
+                                <div class="d-flex flex-wrap align-items-center mt-2">
+                                    <div class="d-flex align-items-center progress-order-left">
+                                        <div class="progress progress-round m-0 orange conversation-bar" data-percent="46">
+                                            <span class="progress-left">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                        </div>
+                                        <div class="progress-value ml-3 pr-5 border-right">
+                                            <h5>$12,6598</h5>
+                                            <p class="mb-0 mx-1">Average Orders</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center ml-5 progress-order-right">
+                                        <div class="progress progress-round m-0 primary conversation-bar" data-percent="46">
+                                            <span class="progress-left">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar"></span>
+                                            </span>
+                                        </div>
+                                        <div class="progress-value ml-3">
+                                            <h5>$59,8478</h5>
+                                            <p class="mb-0 mx-1">Top Orders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div id="orderSummaryChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <footer class="footer mb-4 mt-4">
+                <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item">Privacy Policy</li>
+                                    <li class="list-inline-item">Terms of Use</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <span class="mr-1"><script>document.write(new Date().getFullYear())</script>©</span> POS Dash.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+     <script src="node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script> 
+    <script src="node_modules/bootstrap/dist/js/bootstrap.esm.min.js"></script>
+        <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

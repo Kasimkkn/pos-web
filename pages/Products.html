@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pos-SYstem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+        
+        
+        <link rel="stylesheet" href="../style.css">
+
+        <script type="module" src="../script/Products.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+
+            <div class="menu-item">
+                <a href="index.html">POS</a>
+                <button class="toggle-button mx-4 text-success " id="toggle-sidebar">&#9776;</button>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-tachometer-alt text-success fs-5"></i>
+                <a href="../index.html">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-box text-success fs-5"></i>
+                <a href="Products.html">Products</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-list-alt text-success fs-5"></i>
+                <a href="Category.html">Category</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-shopping-cart text-success fs-5"></i>
+                <a href="Sales.html">Sales</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-chart-line text-success fs-5"></i>
+                <a href="Purchases.html">Purchases</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-undo text-success fs-5"></i>
+                <a href="Returns.html">Returns</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-users text-success fs-5"></i>
+                <a href="Peoples.html">Peoples</a>
+
+            </div>
+        </div>
+
+        <div class="content-page">
+            <div class="top-navbar">
+                <div class="navbar-custom">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="row d-flex align-items-center justify-content-between w-100">
+                            <div class="col-lg-6">
+                                <div class="search-bar device-search w-100 mx-2">
+                                    <form action="#" class="searchbox">
+                                        <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+                                        <input type="text" class="form-control search-input" placeholder="Search here...">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <div class="icons mx-2 mx-lg-5 d-flex gap-5">
+                                    <div class="notification">
+                                        <i class="fas fa-envelope text-success fs-5"></i>
+                                    </div>
+                                    <div class="mail">
+                                        <i class="fas fa-users text-success fs-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="row d-flex flex-column gap-3">
+                    <div class="col-lg-12">
+                        <div class="row mt-4 px-3">
+                            <div class="col-lg-8 d-flex align-items-center ">
+                                <div class="card rounded border border-white">
+                                    <h2>Proudcts list</h2>
+                                    <p>The product list effectively dictates product presentation and provides space</p>
+                                    <p>to list your products and offering in the most appealing way.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex align-items-center justify-content-end">
+                                <button class="btn btn-success" id="AddProducts" data-bs-toggle="modal" data-bs-target="#ProductsModal">Add Products +</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 my-2">
+                        <div class=" table-responsive rounded">
+                            <table id="myTable" class="">
+                                <thead class="bg-secondary text-uppercase">
+                                    <tr class="ligth ligth-data">
+                                        <th >
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </th>
+                                        <th >Product</th>
+                                        <th >Code</th>
+                                        <th >Category</th>
+                                        <th >Price</th>
+                                        <th >Brand Name</th>
+                                        <th >Cost</th>
+                                        <th >Quantity</th>
+                                        <th >Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="ligth ligth-data">
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img src="../img/02.png" alt="" class="w-25 h-25">
+                                            Organic Cream
+                                        </td>
+                                        <td>CREM01</td>
+                                        <td>Beauty</td>	
+                                        <td>$25.00</td>	
+                                        <td>Lakme</td>	
+                                        <td>$10.00</td>	
+                                        <td>10.0</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="ligth ligth-data">
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img src="../img/02.png" alt="" class="w-25 h-25">
+                                            Organic Cream</td>
+                                        <td>CREM01</td>
+                                        <td>Beauty</td>	
+                                        <td>$25.00</td>	
+                                        <td>Lakme</td>	
+                                        <td>$10.00</td>	
+                                        <td>10.0</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="ligth ligth-data">
+                                        <td><div class="checkbox d-inline-block">
+                                            <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                            <label for="checkbox1" class="mb-0"></label>
+                                        </div>
+                                    </td>
+                                        <td>
+                                            <img src="../img/02.png" alt="" class="w-25 h-25">
+                                            Organic Cream</td>
+                                        <td>CREM01</td>
+                                        <td>Beauty</td>	
+                                        <td>$25.00</td>	
+                                        <td>Lakme</td>	
+                                        <td>$10.00</td>	
+                                        <td>10.0</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="ligth ligth-data">
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img src="../img/02.png" alt="" class="w-25 h-25">
+                                            Organic Cream</td>
+                                        <td>CREM01</td>
+                                        <td>Beauty</td>	
+                                        <td>$25.00</td>	
+                                        <td>Lakme</td>	
+                                        <td>$10.00</td>	
+                                        <td>10.0</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="ligth ligth-data">
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <img src="../img/02.png" alt="" class="w-25 h-25">
+                                            Organic Cream</td>
+                                        <td>CREM01</td>
+                                        <td>Beauty</td>	
+                                        <td>$25.00</td>	
+                                        <td>Lakme</td>	
+                                        <td>$10.00</td>	
+                                        <td>10.0</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer mb-4">
+                <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item">Privacy Policy</li>
+                                    <li class="list-inline-item">Terms of Use</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <span class="mr-1"><script>document.write(new Date().getFullYear())</script>©</span> POS Dash.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+
+    </div>
+    <div class="modal fade " id="ProductsModal" tabindex="-1" aria-labelledby="ProduModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ProductsModal">Add products</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="mb-3">
+                      <label for="ProductsName" class="form-label">Products</label>
+                      <input type="text" class="form-control" id="ProductsName" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="ProductCode" class="form-label">Code</label>
+                        <input type="text" class="form-control" id="ProductCode" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="ProductsCategory" class="form-label">Category</label>
+                        <input type="text" class="form-control" id="ProductsCategory" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="ProductsPrice" class="form-label">Price</label>
+                        <input type="text" class="form-control" id="ProductsPrice" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="ProductsBrand" class="form-label">Brand Name</label>
+                        <input type="text" class="form-control" id="ProductsBrand" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="ProductsCost" class="form-label">Cost</label>
+                        <input type="text" class="form-control" id="ProductsCost" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="ProductsQuantity" class="form-label">Quantity</label>
+                        <input type="text" class="form-control" id="ProductsQuantity" >
+                      </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-info" id="UpdateProducts">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    
+        <script src="../script.js"></script>
+</body>
+
+</html>

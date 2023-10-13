@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pos-SYstem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="../style.css">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+
+            <div class="menu-item">
+                <a href="index.html">POS</a>
+                <button class="toggle-button mx-4 text-success " id="toggle-sidebar">&#9776;</button>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-tachometer-alt text-success fs-5"></i>
+                <a href="../index.html">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-box text-success fs-5"></i>
+                <a href="Products.html">Products</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-list-alt text-success fs-5"></i>
+                <a href="Category.html">Category</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-shopping-cart text-success fs-5"></i>
+                <a href="Sales.html">Sales</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-chart-line text-success fs-5"></i>
+                <a href="Purchases.html">Purchases</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-undo text-success fs-5"></i>
+                <a href="Returns.html">Returns</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-users text-success fs-5"></i>
+                <a href="Peoples.html">Peoples</a>
+
+            </div>
+        </div>
+
+        <div class="content-page">
+            <div class="top-navbar">
+                <div class="navbar-custom">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="row d-flex align-items-center justify-content-between w-100">
+                            <div class="col-lg-6">
+                                <div class="search-bar device-search w-100 mx-2">
+                                    <form action="#" class="searchbox">
+                                        <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+                                        <input type="text" class="form-control search-input"
+                                            placeholder="Search here...">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <div class="icons mx-2 mx-lg-5 d-flex gap-5">
+                                    <div class="notification">
+                                        <i class="fas fa-envelope text-success fs-5"></i>
+                                    </div>
+                                    <div class="mail">
+                                        <i class="fas fa-users text-success fs-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row mt-3 mb-2 peoplesTable">
+                    <div class="col-lg-12">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                            <div>
+                                <h4 class="mb-3">Customer List</h4>
+                                <p class="mb-0">A customer dashboard lets you easily gather and visualize customer data
+                                    from optimizing <br>
+                                    the customer experience, ensuring customer retention. </p>
+                            </div>
+                            <div class="col-lg-4 d-flex align-items-center justify-content-end">
+                                <button class="btn btn-success">Add Customer +</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table id="myTable">
+                                <thead class="bg-white text-uppercase">
+                                    <tr class="ligth ligth-data">
+                                        <th>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone No.</th>
+                                        <th>Country</th>
+                                        <th>Order</th>
+                                        <th>Status</th>
+                                        <th>Last Order</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="ligth-body">
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Max Conversion</td>
+                                        <td>max@gmail.com</td>
+                                        <td>0123456789</td>
+                                        <td>USA</td>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="badge bg-danger">Pending</div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox3">
+                                                <label for="checkbox3" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Alex john</td>
+                                        <td>alex@gmail.com</td>
+                                        <td>0123456123</td>
+                                        <td>USA</td>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="badge bg-danger">Pending</div>
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox4">
+                                                <label for="checkbox4" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Cliff Hanger</td>
+                                        <td>cliff@gmail.com</td>
+                                        <td>0189556789</td>
+                                        <td>UK</td>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="badge bg-danger">Pending</div>
+                                        </td>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox5">
+                                                <label for="checkbox5" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Terry Aki</td>
+                                        <td>terry@gmail.com</td>
+                                        <td>0123205789</td>
+                                        <td>USA</td>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="badge bg-danger">Pending</div>
+                                        </td>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox6">
+                                                <label for="checkbox6" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Rock lai</td>
+                                        <td>rock@gmail.com</td>
+                                        <td>0123452289</td>
+                                        <td>UK</td>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="badge bg-danger">Pending</div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox10">
+                                                <label for="checkbox10" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Paige Turner</td>
+                                        <td>paige@gmail.com</td>
+                                        <td>0125856789</td>
+                                        <td>UK</td>
+                                        <td>9</td>
+                                        <td>
+                                            <div class="badge bg-danger">Pending</div>
+                                        </td>
+                                        <td>7</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-3 mb-2 peoplesTable">
+                    <div class="col-lg-12">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                            <div>
+                                <h4 class="mb-3">User List</h4>
+                                <p class="mb-0">A dashboard provides you an overview of user list with access to the
+                                    most important data,</p>
+                                <p>functions and controls.</p>
+                            </div>
+                            <div class="col-lg-4 d-flex align-items-center justify-content-end">
+                                <button class="btn btn-info">Add Users +</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table id="myTable1">
+                                <thead class="bg-white text-uppercase">
+                                    <tr class="ligth ligth-data">
+                                        <th>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Company</th>
+                                        <th>Awors Points</th>
+                                        <th>Group</th>
+                                        <th>Status</th>
+                                        <th>Store</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="ligth-body">
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Cliff Hanger</td>
+                                        <td>cliff@gmail.com</td>
+                                        <td>Product Manager</td>
+                                        <td>0</td>
+                                        <td>Cliff</td>
+                                        <td>Active</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Cliff Hanger</td>
+                                        <td>cliff@gmail.com</td>
+                                        <td>Product Manager</td>
+                                        <td>0</td>
+                                        <td>Cliff</td>
+                                        <td>Active</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Cliff Hanger</td>
+                                        <td>cliff@gmail.com</td>
+                                        <td>Product Manager</td>
+                                        <td>0</td>
+                                        <td>Cliff</td>
+                                        <td>Active</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Cliff Hanger</td>
+                                        <td>cliff@gmail.com</td>
+                                        <td>Product Manager</td>
+                                        <td>0</td>
+                                        <td>Cliff</td>
+                                        <td>Active</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Cliff Hanger</td>
+                                        <td>cliff@gmail.com</td>
+                                        <td>Product Manager</td>
+                                        <td>0</td>
+                                        <td>Cliff</td>
+                                        <td>Active</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Cliff Hanger</td>
+                                        <td>cliff@gmail.com</td>
+                                        <td>Product Manager</td>
+                                        <td>0</td>
+                                        <td>Cliff</td>
+                                        <td>Active</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-3 mb-2 peoplesTable">
+                    <div class="col-lg-12">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                            <div>
+                                <h4 class="mb-3">Supplier List</h4>
+                                <p class="mb-0">A customer dashboard lets you easily gather and visualize customer data
+                                    from optimizing <br>
+                                    the customer experience, ensuring customer retention. </p>
+                            </div>
+                            <div class="col-lg-4 d-flex align-items-center justify-content-end">
+                                <button class="btn btn-info">Add Supplier +</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table id="myTable2">
+                                <thead class="bg-white text-uppercase">
+                                    <tr class="ligth ligth-data">
+                                        <th>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox1">
+                                                <label for="checkbox1" class="mb-0"></label>
+                                            </div>
+                                        </th>
+                                        <th>Company Name</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone No.</th>
+                                        <th>City</th>
+                                        <th>Country</th>
+                                        <th>GST No</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="ligth-body">
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Fruits Supply</td>
+                                        <td>Max Conversion</td>
+                                        <td>max@gmail.com</td>
+                                        <td>0123456789</td>
+                                        <td>Petaling</td>
+                                        <td>USA</td>
+                                        <td>1234</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Fruits Supply</td>
+                                        <td>Max Conversion</td>
+                                        <td>max@gmail.com</td>
+                                        <td>0123456789</td>
+                                        <td>Petaling</td>
+                                        <td>USA</td>
+                                        <td>1234</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Fruits Supply</td>
+                                        <td>Max Conversion</td>
+                                        <td>max@gmail.com</td>
+                                        <td>0123456789</td>
+                                        <td>Petaling</td>
+                                        <td>USA</td>
+                                        <td>1234</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Fruits Supply</td>
+                                        <td>Max Conversion</td>
+                                        <td>max@gmail.com</td>
+                                        <td>0123456789</td>
+                                        <td>Petaling</td>
+                                        <td>USA</td>
+                                        <td>1234</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Fruits Supply</td>
+                                        <td>Max Conversion</td>
+                                        <td>max@gmail.com</td>
+                                        <td>0123456789</td>
+                                        <td>Petaling</td>
+                                        <td>USA</td>
+                                        <td>1234</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox d-inline-block">
+                                                <input type="checkbox" class="checkbox-input" id="checkbox2">
+                                                <label for="checkbox2" class="mb-0"></label>
+                                            </div>
+                                        </td>
+                                        <td>Fruits Supply</td>
+                                        <td>Max Conversion</td>
+                                        <td>max@gmail.com</td>
+                                        <td>0123456789</td>
+                                        <td>Petaling</td>
+                                        <td>USA</td>
+                                        <td>1234</td>
+                                        <td>
+                                            <div class="btn btn-info">see</div>
+                                            <div class="btn btn-success">edit</div>
+                                            <div class="btn btn-danger">delete</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="footer mt-3 mb-4">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">Privacy Policy</li>
+                                        <li class="list-inline-item">Terms of Use</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 text-right">
+                                    <span class="mr-1">
+                                        <script>document.write(new Date().getFullYear())</script>©
+                                    </span> POS Dash.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../script.js"></script>
+</body>
+
+</html>
